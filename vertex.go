@@ -22,6 +22,10 @@ func VertexFromString(s string) *Vertex {
 		return nil
 	}
 
+	if vertStrings[0] != "v" {
+		return nil
+	}
+
 	x, _ := strconv.ParseFloat(vertStrings[1], 10)
 	y, _ := strconv.ParseFloat(vertStrings[2], 10)
 	z, _ := strconv.ParseFloat(vertStrings[3], 10)
